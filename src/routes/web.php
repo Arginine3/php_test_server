@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\WeightGraphController;
+
+Route::get('/graph', [WeightGraphController::class,"show"])->name("show_graph");
 
 Route::get('/', function () {
     return view('welcome');
